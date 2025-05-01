@@ -1,9 +1,9 @@
 from rest_framework import serializers
-from .models import Product, Offer, Cart
+from .models import Product, Discount, Cart
 
 class DiscountSerializer(serializers.ModelSerializer):
     class Meta:
-        model = Offer
+        model = Discount
         fields = '__all__'
 
 class ProductSerializer(serializers.ModelSerializer):

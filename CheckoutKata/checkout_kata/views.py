@@ -3,7 +3,7 @@ from rest_framework.views import APIView
 from rest_framework.response import Response
 from django.shortcuts import get_object_or_404
 
-from checkout_kata.models import Product, Offer, Cart
+from checkout_kata.models import Product, Discount, Cart
 from checkout_kata.serializers import ProductSerializer, DiscountSerializer, CartSerializer
 
 class ProductListAPIView(generics.ListAPIView):
@@ -15,7 +15,7 @@ class DiscountView(APIView):
     """Retrieve, create, update, or delete a discount."""
 
     def get(self, request, pk):
-        discount = get_object_or_404(Offer, pk=pk)
+        discount = get_object_or_404(Discount, pk=pk)
         serializer = DiscountSerializer(discount)
         return Response(serializer.data, status=status.HTTP_200_OK)
 
@@ -27,7 +27,7 @@ class DiscountView(APIView):
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
     def patch(self, request, pk):
-        discount = get_object_or_404(Offer, pk=pk)
+        discount = get_object_or_404(Discount, pk=pk)
         serializer = DiscountSerializer(discount, data=request.data, partial=True)
         if serializer.is_valid():
             serializer.save()
@@ -35,7 +35,7 @@ class DiscountView(APIView):
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
     def delete(self, request, pk):
-        discount = get_object_or_404(Offer, pk=pk)
+        discount = get_object_or_404(Discount, pk=pk)
         discount.delete()
         return Response({"message": "Discount deleted successfully"}, status=status.HTTP_204_NO_CONTENT)
 

@@ -1,0 +1,157 @@
+/* Root Variables for Easy Customization */
+:root {
+    --primary-color: #434A54; /* Dark charcoal */
+    --secondary-color: #5DADE2; /* Light blue */
+    --accent-color: #F0AD4E; /* Mustard yellow */
+    --background-light: #E6E9ED; /* Light gray-blue */
+    --text-primary: #373A3C;
+    --text-secondary: #656D78;
+    --border-radius: 6px;
+    --box-shadow-light: 0 1px 2px rgba(0, 0, 0, 0.08);
+    --box-shadow-medium: 0 2px 4px rgba(0, 0, 0, 0.12);
+    --font-family-base: 'Helvetica Neue', Helvetica, Arial, sans-serif; /* Clean, readable font */
+    --font-weight-bold: 700;
+    --transition-duration: 0.15s;
+    --spacing-small: 6px;
+    --spacing-medium: 12px;
+    --spacing-large: 18px;
+}
+
+/* Reset some default browser styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: var(--font-family-base);
+    background-color: var(--background-light);
+    color: var(--text-primary);
+    line-height: 1.5;
+}
+
+/* Container */
+.container {
+    max-width: 100%; /* Slightly narrower for focus */
+    max-height: 100%;
+    margin: var(--spacing-large) auto;
+    padding: var(--spacing-large);
+    background-color: #FFFFFF;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow-medium);
+}
+
+/* Header Section */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--spacing-medium) 0; /* Less vertical padding */
+    border-bottom: 1px solid #D1D8E0; /* Lighter separator */
+    margin-bottom: var(--spacing-large);
+}
+
+.header h1 {
+    font-size: 26px;
+    color: var(--primary-color);
+    margin: 0;
+    font-weight: var(--font-weight-bold);
+}
+
+.shopping-bag-icon {
+    font-size: 20px; /* Slightly smaller icon */
+    color: var(--secondary-color);
+    cursor: pointer;
+}
+
+/* Product Grid */
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Adjust min width */
+    gap: var(--spacing-medium); /* Tighter gap */
+}
+
+/* Product Card */
+.product-card {
+    background-color: #FFFFFF;
+    padding: var(--spacing-medium);
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow-light);
+    transition: transform var(--transition-duration) ease-in-out;
+    border: 1px solid #E0E6ED; /* Lighter border */
+}
+
+.product-card:hover {
+    transform: translateY(-2px); /* More subtle lift */
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Product Info */
+.product-name {
+    font-size: 1rem;
+    font-weight: var(--font-weight-bold);
+    color: var(--text-primary);
+    margin-bottom: var(--spacing-small);
+    line-height: 1.3;
+}
+
+.product-price {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    margin-bottom: var(--spacing-small);
+}
+
+.discounts,
+.no-offers {
+    font-size: 0.8rem;
+    color: #AAB2BD; /* Even lighter text */
+}
+
+/* Buttons */
+.button-group {
+    display: flex;
+    gap: 5px; /* space between buttons */
+}
+.add-to-cart,
+.cart-button,
+.offer-button,
+.add-offer-button {
+    background-color: var(--secondary-color);
+    color: white;
+    border: none;
+    padding: var(--spacing-small) var(--spacing-medium);
+    border-radius: var(--border-radius);
+    font-size: 0.85rem;
+    cursor: pointer;
+    transition: background-color var(--transition-duration) ease;
+    font-weight: var(--font-weight-bold);
+}
+
+.add-to-cart:hover,
+.cart-button:hover,
+.offer-button:hover,
+.add-offer-button:hover {
+    background-color: #2980B9; /* Darker blue on hover */
+}
+
+.add-to-cart:active,
+.cart-button:active,
+.offer-button:active,
+.add-offer-button:active {
+    transform: scale(0.97);
+}
+
+
+/* Cart Badge */
+
+.cart-badge {
+    position: absolute;
+    top: 8.5%;
+    right: 2.5%;
+    /* top: auto;
+    right: 14.5%; */
+    transform: translate(50%, -50%);
+    background: #f0ad4e;
+    color: white;
+    font-size: 0.7rem;
+    font-weight: var(--font-weight-bold);
+    padding: 3px 6px;
+    border-radius: 50%;
+}

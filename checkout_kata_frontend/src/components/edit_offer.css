@@ -1,0 +1,102 @@
+:root {
+    --primary-color: #434A54;
+    --secondary-color: #5DADE2;
+    --accent-color: #F0AD4E;
+    --background-light: #E6E9ED;
+    --text-primary: #373A3C;
+    --text-secondary: #656D78;
+    --border-radius: 6px;
+    --box-shadow-light: 0 1px 2px rgba(0, 0, 0, 0.08);
+    --box-shadow-medium: 0 2px 4px rgba(0, 0, 0, 0.12);
+    --font-family-base: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    --font-weight-bold: 700;
+    --transition-duration: 0.15s;
+    --spacing-small: 6px;
+    --spacing-medium: 12px;
+    --spacing-large: 18px;
+}
+
+body {
+    font-family: var(--font-family-base);
+    background-color: var(--background-light);
+    color: var(--text-primary);
+    margin: 0;
+    padding: var(--spacing-large);
+}
+
+.edit-offer-container {
+    max-width: 600px;
+    margin: auto;
+    padding: var(--spacing-large);
+    background-color: #fff;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow-medium);
+}
+
+label {
+    font-weight: var(--font-weight-bold);
+    display: block;
+    margin-bottom: 4px;
+}
+
+input[type="text"],
+input[type="number"] {
+    width: 100%;
+    padding: var(--spacing-small);
+    margin-bottom: var(--spacing-medium);
+    border: 1px solid #ccc;
+    border-radius: var(--border-radius);
+    font-size: 1rem;
+    outline: none;
+    transition: border-color var(--transition-duration);
+}
+
+input:focus {
+    border-color: var(--secondary-color);
+}
+
+/* Buttons Layout */
+.button-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: var(--spacing-medium);
+    max-width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+    gap: 10px;
+}
+
+/* Buttons */
+.update-button,
+.delete-button {
+    flex: 1;
+    padding: var(--spacing-small) var(--spacing-medium);
+    border: none;
+    border-radius: var(--border-radius);
+    color: white;
+    font-weight: var(--font-weight-bold);
+    font-size: 0.85rem;
+    cursor: pointer;
+    transition: background-color var(--transition-duration) ease;
+}
+
+.update-button {
+    background-color: var(--secondary-color);
+}
+.update-button:hover {
+    background-color: #3498db;
+}
+.update-button:active {
+    transform: scale(0.97);
+}
+
+.delete-button {
+    background-color: #dc3545;
+}
+.delete-button:hover {
+    background-color: #c82333;
+}
+.delete-button:active {
+    transform: scale(0.97);
+}
