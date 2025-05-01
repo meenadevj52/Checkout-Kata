@@ -19,7 +19,6 @@ const CartPage = () => {
     const fetchCart = async () => {
         try {
             const response = await axios.get(CART_API);
-
             if (Array.isArray(response.data) && response.data.length > 0) {
                 setCart(response.data[0]);
             } else {
@@ -83,7 +82,7 @@ const CartPage = () => {
             showErrorToast("Error removing cart item");
         }
     };
-
+    
     return (
         <div className="cart-container">
             <h1>Your Cart</h1>

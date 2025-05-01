@@ -1,7 +1,7 @@
 import { toast } from "react-toastify";
-
+import 'react-toastify/dist/ReactToastify.css';
+import '../App.css'; 
 // Common Toast Configuration
-
 
 const toastOptions = {
     position: "bottom-right",
@@ -12,6 +12,7 @@ const toastOptions = {
     draggable: true,
     progress: undefined,
     theme: "light",
+    className: "toast-blue",
 };
 
 // Reusable Toast Functions

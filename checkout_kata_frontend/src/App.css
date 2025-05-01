@@ -36,3 +36,25 @@
     transform: rotate(360deg);
   }
 }
+/* Custom blue success toast styling */
+.toast-blue {
+  background-color: #f8f8f8 !important;
+  color: #13466d !important;
+  font-weight: bold;
+  border-radius: 6px;
+}
+
+/* Filled portion of the progress bar */
+.toast-blue .Toastify__progress-bar {
+  background-color: #3498db !important;
+}
+
+/* Background (track) of the progress bar */
+.toast-blue .Toastify__progress-bar-theme--light,
+.toast-blue .Toastify__progress-bar-theme--colored {
+  background: #13466d !important; /* Light blue track */
+}
+/* Override the green check icon color */
+.toast-blue .Toastify__toast-icon svg {
+  fill: #13466d !important;  /* Blue icon */
+}
