@@ -29,7 +29,7 @@ sudo apt install python3.10-venv
 ```
 ## 🔧 Backend Setup (Django)
 
-- 1. Clone the Repository
+1. Clone the Repository
 ```bash
 git clone https://github.com/Rockon-collab/Checkout-Kata.git
 cd Checkout-Kata
