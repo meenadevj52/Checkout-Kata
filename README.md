@@ -65,45 +65,7 @@ python manage.py runserver
 
 ## 🌐 Frontend Setup (React)
 
-1. Navigate to the frontend directory:
-```bash
-cd frontend
-```
-
-2. Install Dependencies:
-```bash
-npm install
-```
-
-3. Start the React App:
-```bash
-npm start
-```
-
-4. Run Migrations
-```bash
-python manage.py migrate
-```
-
-5. Create Superuser
-```bash
-python manage.py createsuperuser
-```
-
-6. Run the Server
-```bash
-python manage.py runserver 0.0.0.0:8000
-```
-The backend will be running at `http://localhost:8000
-
-7. Access Admin Panel
-- URL: `http://localhost:8000/admin/
-
----
-
-## 🌐 Frontend Setup (React)
-
-- 1. Navigate to the Frontend Directory
+1. Navigate to the Frontend Directory
 ```bash
 cd frontend
 ```
